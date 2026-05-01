@@ -1,20 +1,16 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 
-const geistSans = Geist({
-  variable: "--font-geist-sans",
-  subsets: ["latin"],
-});
-
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
-  subsets: ["latin"],
-});
+const description =
+  "RITUALS is a permanent document and a body of work dedicated to independent image-making — sites of lingering. Published by Aqua Regia, 2026.";
 
 export const metadata: Metadata = {
   title: "Aqua Regia",
-  description: "Aqua Regia — Next.js app with Tailwind CSS",
+  description,
+  openGraph: {
+    title: "Aqua Regia",
+    description,
+  },
 };
 
 export default function RootLayout({
@@ -23,11 +19,11 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html
-      lang="en"
-      className={`${geistSans.variable} ${geistMono.variable} h-full antialiased`}
-    >
-      <body className="min-h-full flex flex-col">{children}</body>
+    <html lang="en" className="h-full">
+      <head>
+        <link rel="stylesheet" href="/fonts/stylesheet.css" />
+      </head>
+      <body className="min-h-full flex flex-col antialiased">{children}</body>
     </html>
   );
 }
