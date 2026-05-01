@@ -9,6 +9,7 @@
     "lint": "eslint",
     "studio": "npm run dev --prefix sanity",
     "studio:build": "npm run build --prefix sanity",
+    "studio:build:readable": "npm run build:readable --prefix sanity",
     "studio:deploy": "npm run deploy --prefix sanity"
   },
   "dependencies": {

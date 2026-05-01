@@ -8,6 +8,7 @@
     "dev": "sanity dev",
     "start": "sanity start",
     "build": "sanity build",
+    "build:readable": "sanity build --no-minify --source-maps",
     "deploy": "sanity deploy"
   },
   "dependencies": {
