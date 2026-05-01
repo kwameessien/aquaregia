@@ -6,7 +6,10 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "eslint"
+    "lint": "eslint",
+    "studio": "npm run dev --prefix sanity",
+    "studio:build": "npm run build --prefix sanity",
+    "studio:deploy": "npm run deploy --prefix sanity"
   },
   "dependencies": {
     "next": "16.2.4",
