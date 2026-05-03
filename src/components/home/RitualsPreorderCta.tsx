@@ -5,7 +5,7 @@ const linkClassName =
 
 export default function RitualsPreorderCta() {
   return (
-    <p className="relative z-10 mt-[60px] w-full text-center sm:mt-[80px]">
+    <p className="relative z-10 w-full text-center">
       <Link href="/rituals-book" className={linkClassName}>
         Pre-order here
       </Link>
