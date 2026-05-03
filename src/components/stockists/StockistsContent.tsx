@@ -11,17 +11,15 @@ const stockists = [
 
 export default function StockistsContent() {
   return (
-    <div className="flex min-h-0 flex-1 flex-col items-center justify-center px-[24px] py-[48px]">
-      <div className="w-full max-w-md text-center">
-        <h1 className={`${listTextClass} mb-[1.125rem]`}>Stockists</h1>
-        <ul className={`${listTextClass} m-0 list-none p-0 leading-none`}>
-          {stockists.map((name) => (
-            <li key={name} className="m-0 p-0">
-              {name}
-            </li>
-          ))}
-        </ul>
-      </div>
+    <div className="mx-auto w-full max-w-md text-center">
+      <h1 className={`${listTextClass} mb-[1.125rem]`}>Stockists</h1>
+      <ul className={`${listTextClass} m-0 list-none p-0 leading-none`}>
+        {stockists.map((name) => (
+          <li key={name} className="m-0 p-0">
+            {name}
+          </li>
+        ))}
+      </ul>
     </div>
   );
 }
