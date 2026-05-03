@@ -16,16 +16,16 @@ const cartClass =
 export default function RitualsBookProductBar() {
   return (
     <section className="w-full shrink-0 bg-white">
-      <div className="px-[12px] pb-[12px] pt-[20px] sm:px-[16px] sm:pb-[14px] sm:pt-[24px] lg:px-[20px] lg:pb-[16px]">
-        <div className="flex flex-col gap-[28px] lg:flex-row lg:items-stretch lg:justify-between lg:gap-6 xl:gap-10">
-          <div className="flex w-full shrink-0 flex-col gap-[24px] self-stretch sm:gap-[28px] lg:max-w-[min(100%,320px)] lg:min-h-0 lg:justify-between lg:gap-0">
+      <div className="px-[12px] pb-[8px] pt-[14px] sm:px-[16px] sm:pb-[10px] sm:pt-[18px] lg:px-[20px] lg:pb-[10px]">
+        <div className="flex flex-col gap-[18px] lg:flex-row lg:items-stretch lg:justify-between lg:gap-4 xl:gap-6">
+          <div className="flex w-full shrink-0 flex-col gap-[16px] self-stretch sm:gap-[18px] lg:max-w-[min(100%,320px)] lg:min-h-0 lg:justify-between lg:gap-0">
             <h2 className={titleClass}>Rituals</h2>
-            <span className="block w-full border border-black px-[14px] py-[8px] text-center font-site-nav text-[8px] font-normal uppercase tracking-[0.14em] text-neutral-600 sm:text-[9px]">
+            <span className="block w-full border border-black px-[10px] py-[6px] text-center font-site-nav text-[8px] font-normal uppercase tracking-[0.14em] text-neutral-600 sm:text-[9px]">
               Coming soon
             </span>
           </div>
 
-          <div className={`${specsClass} flex shrink-0 flex-col gap-[24px] sm:gap-[28px] lg:max-w-[220px]`}>
+          <div className={`${specsClass} flex shrink-0 flex-col gap-[14px] sm:gap-[16px] lg:max-w-[220px]`}>
             <p className="m-0">
               180 pages
               <br />
@@ -41,7 +41,7 @@ export default function RitualsBookProductBar() {
             </p>
           </div>
 
-          <div className="flex min-w-0 flex-1 flex-col gap-[24px] sm:gap-[28px] lg:max-w-[min(100%,520px)] xl:max-w-[560px]">
+          <div className="flex min-w-0 flex-1 flex-col gap-[14px] sm:gap-[16px] lg:max-w-[min(100%,520px)] xl:max-w-[560px]">
             <p className={`${introClass} m-0`}>Seven stories presented by AR PAPER.</p>
             <p className={`${blurbClass} m-0`}>
               A flood of light and a flash of colour inside your jacket pocket. Notes of a missing
