@@ -1,17 +1,10 @@
-import Link from "next/link";
-
 import SiteHeader from "@/components/site/SiteHeader";
 
 export default function RitualsBookPage() {
   return (
-    <main className="flex min-h-screen flex-col bg-white">
+    <main className="flex min-h-[100dvh] min-h-screen flex-col bg-white">
       <SiteHeader />
-      <div className="flex flex-1 flex-col items-center justify-center px-[24px] py-[48px]">
-        <p className="text-[15px] text-neutral-600">Pre-order — link your store or embed here.</p>
-        <Link href="/" className="mt-[24px] text-[13px] text-black underline underline-offset-4">
-          Home
-        </Link>
-      </div>
+      <div className="min-h-0 flex-1 px-[20px] py-[48px] sm:px-[32px]" />
     </main>
   );
 }
