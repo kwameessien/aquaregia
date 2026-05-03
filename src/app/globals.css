@@ -31,16 +31,7 @@ body {
   font-style: normal;
 }
 
-/* Times Now SemiLight — distinct family so it is not merged with Light (both weight 300 in /fonts/stylesheet.css) */
-@font-face {
-  font-family: "Times Now SemiLight";
-  src: url("/fonts/TimesNow-SemiLight.woff2") format("woff2"),
-    url("/fonts/TimesNow-SemiLight.woff") format("woff");
-  font-weight: normal;
-  font-style: normal;
-  font-display: swap;
-}
-
+/* Times Now SemiLight — @font-face in /fonts/stylesheet.css (family "Times Now SemiLight") */
 .font-times-now-semi-light {
   font-family: "Times Now SemiLight", "Times Now", ui-serif, Georgia, "Times New Roman", serif;
   font-weight: normal;

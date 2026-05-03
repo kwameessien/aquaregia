@@ -10,6 +10,20 @@
     font-style: normal;
 }
 
+/* Separate family so SemiLight is selectable; same asset filenames as block above (place files beside this stylesheet). */
+@font-face {
+    font-family: 'Times Now SemiLight';
+    src: url('TimesNow-SemiLight.eot');
+    src: local('Times Now SemiLight'), local('TimesNow-SemiLight'),
+        url('TimesNow-SemiLight.eot?#iefix') format('embedded-opentype'),
+        url('TimesNow-SemiLight.woff2') format('woff2'),
+        url('TimesNow-SemiLight.woff') format('woff'),
+        url('TimesNow-SemiLight.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
 @font-face {
     font-family: 'Times Now';
     src: url('TimesNow-LightItalic.eot');
