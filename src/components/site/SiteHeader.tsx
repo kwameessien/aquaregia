@@ -10,13 +10,13 @@ const linkClass =
 export default function SiteHeader() {
   return (
     <header className="flex flex-col items-center bg-white px-[12px] pb-[10px] pt-[10px]">
-      <Link href="/" className="mb-[8px] block" aria-label="Aqua Regia home">
+      <Link href="/" className="mb-[6px] block" aria-label="Aqua Regia home">
         <Image
           src="/assets/images/logos/AR-finalfinal.svg"
           alt=""
-          width={96}
-          height={63}
-          className="h-auto w-[80px] select-none sm:w-[88px]"
+          width={56}
+          height={37}
+          className="h-auto w-[40px] select-none sm:w-[44px]"
           priority
         />
       </Link>
