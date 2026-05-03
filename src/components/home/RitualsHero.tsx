@@ -24,8 +24,8 @@ export default function RitualsHero() {
           with forty collaborators, spans 180 pages bound within a single volume. Published by Aqua
           Regia, 2026.
         </h1>
-        <RitualsPreorderCta />
       </div>
+      <RitualsPreorderCta />
     </section>
   );
 }
