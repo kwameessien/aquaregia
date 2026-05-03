@@ -8,7 +8,10 @@ const linkClass =
 
 export default function InfoStockists() {
   return (
-    <nav aria-label="Stockists" className={`flex w-full justify-center ${navClass}`}>
+    <nav
+      aria-label="Stockists"
+      className={`mb-[30px] flex w-full justify-center sm:mb-[48px] ${navClass}`}
+    >
       <Link href="/stockists" className={linkClass}>
         Stockists
       </Link>
