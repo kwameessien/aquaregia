@@ -1,17 +1,17 @@
 const titleClass =
-  "font-site-nav text-[12px] font-normal uppercase tracking-[0.12em] text-black sm:text-[13px]";
+  "font-site-nav text-[9px] font-normal uppercase tracking-[0.12em] text-black sm:text-[10px]";
 
 const introClass =
-  "font-site-nav text-[11px] font-normal tracking-[0.04em] leading-[1.5] text-black sm:text-[12px]";
+  "font-site-nav text-[9px] font-normal tracking-[0.04em] leading-[1.5] text-black sm:text-[10px]";
 
 const blurbClass =
-  "font-site-nav text-[11px] font-normal uppercase tracking-[0.08em] leading-[1.5] text-black sm:text-[12px] sm:tracking-[0.06em]";
+  "font-site-nav text-[9px] font-normal uppercase tracking-[0.08em] leading-[1.5] text-black sm:text-[10px] sm:tracking-[0.06em]";
 
 const specsClass =
-  "font-site-nav text-[10px] font-normal uppercase tracking-[0.08em] leading-[1.55] text-black sm:text-[11px] sm:leading-[1.5]";
+  "font-site-nav text-[8px] font-normal uppercase tracking-[0.08em] leading-[1.55] text-black sm:text-[9px] sm:leading-[1.5]";
 
 const cartClass =
-  "font-site-nav text-[12px] font-normal tracking-[0.12em] text-black no-underline decoration-black underline-offset-[3px] decoration-1 transition-[text-decoration-color] hover:underline sm:text-[13px] bg-transparent p-0 cursor-pointer border-0 text-left lg:text-right";
+  "font-site-nav text-[9px] font-normal tracking-[0.12em] text-black no-underline decoration-black underline-offset-[3px] decoration-1 transition-[text-decoration-color] hover:underline sm:text-[10px] bg-transparent p-0 cursor-pointer border-0 text-left lg:text-right";
 
 export default function RitualsBookProductBar() {
   return (
@@ -20,7 +20,7 @@ export default function RitualsBookProductBar() {
         <div className="flex flex-col gap-[28px] lg:flex-row lg:items-stretch lg:justify-between lg:gap-6 xl:gap-10">
           <div className="flex w-full shrink-0 flex-col gap-[24px] self-stretch sm:gap-[28px] lg:max-w-[min(100%,320px)] lg:min-h-0 lg:justify-between lg:gap-0">
             <h2 className={titleClass}>Rituals</h2>
-            <span className="block w-full border border-black px-[14px] py-[8px] text-center font-site-nav text-[10px] font-normal uppercase tracking-[0.14em] text-neutral-600 sm:text-[11px]">
+            <span className="block w-full border border-black px-[14px] py-[8px] text-center font-site-nav text-[8px] font-normal uppercase tracking-[0.14em] text-neutral-600 sm:text-[9px]">
               Coming soon
             </span>
           </div>
