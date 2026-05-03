@@ -5,7 +5,9 @@ export default function HomePage() {
   return (
     <main className="flex min-h-[100dvh] min-h-screen flex-col bg-white">
       <SiteHeader />
-      <RitualsHero />
+      <div className="flex min-h-0 flex-1 flex-col justify-center">
+        <RitualsHero />
+      </div>
     </main>
   );
 }
