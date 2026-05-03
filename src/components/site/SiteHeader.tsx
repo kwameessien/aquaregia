@@ -9,8 +9,8 @@ const linkClass =
 
 export default function SiteHeader() {
   return (
-    <header className="flex flex-col items-center bg-white px-[12px] pb-[10px] pt-[10px]">
-      <Link href="/" className="mb-[6px] block" aria-label="Aqua Regia home">
+    <header className="flex flex-col items-center bg-white px-[12px] pb-[6px] pt-[10px]">
+      <Link href="/" className="mb-[4px] block" aria-label="Aqua Regia home">
         <Image
           src="/assets/images/logos/AR-finalfinal.svg"
           alt=""

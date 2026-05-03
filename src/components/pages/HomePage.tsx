@@ -3,7 +3,7 @@ import SiteHeader from "@/components/site/SiteHeader";
 
 export default function HomePage() {
   return (
-    <main className="flex min-h-screen flex-col bg-white">
+    <main className="flex min-h-[100dvh] min-h-screen flex-col bg-white">
       <SiteHeader />
       <RitualsHero />
     </main>
