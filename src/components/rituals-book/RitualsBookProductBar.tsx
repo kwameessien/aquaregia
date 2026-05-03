@@ -41,7 +41,7 @@ export default function RitualsBookProductBar() {
             </p>
           </div>
 
-          <div className="flex min-w-0 flex-1 flex-col gap-[14px] sm:gap-[16px] lg:max-w-[min(100%,520px)] xl:max-w-[560px]">
+          <div className="flex min-w-0 flex-1 flex-col gap-[14px] sm:gap-[16px] lg:max-w-[min(100%,340px)] xl:max-w-[380px]">
             <p className={`${introClass} m-0`}>Seven stories presented by AR PAPER.</p>
             <p className={`${blurbClass} m-0`}>
               A flood of light and a flash of colour inside your jacket pocket. Notes of a missing
