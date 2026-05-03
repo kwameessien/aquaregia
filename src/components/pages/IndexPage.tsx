@@ -3,10 +3,14 @@ import SiteHeader from "@/components/site/SiteHeader";
 
 export default function IndexPage() {
   return (
-    <main className="flex min-h-screen flex-col bg-white">
-      <SiteHeader />
-      <div className="flex min-h-0 flex-1 flex-col justify-center">
-        <IndexChrome />
+    <main className="relative min-h-[100dvh] min-h-screen bg-white">
+      <div className="relative z-10 bg-white">
+        <SiteHeader />
+      </div>
+      <div className="pointer-events-none absolute inset-0 flex items-center justify-center">
+        <div className="pointer-events-auto w-full">
+          <IndexChrome />
+        </div>
       </div>
     </main>
   );
