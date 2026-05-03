@@ -64,23 +64,26 @@ export default function RitualsBookGallery() {
   }, [n]);
 
   return (
-    <div className="relative mx-auto w-full max-w-[min(100%,920px)]">
-      {/* Tall aspect + object-center created huge letterboxing above each slide; cap height and pin to top. */}
-      <div className="relative h-[min(62dvh,720px)] w-full overflow-hidden bg-white sm:h-[min(68dvh,800px)]">
-        <Image
-          src={src}
-          alt=""
-          fill
-          sizes="(max-width: 640px) 100vw, (max-width: 920px) 90vw, 920px"
-          className="object-contain object-top"
-          priority={index === 0}
-          unoptimized={src.endsWith(".gif")}
-        />
+    <div className="relative left-1/2 w-screen max-w-[100vw] -translate-x-1/2">
+      {/* Full-bleed wrapper so prev/next sit on the viewport edges; image stays centered. */}
+      <div className="relative mx-auto w-full max-w-[min(100%,920px)]">
+        {/* Tall aspect + object-center created huge letterboxing above each slide; cap height and pin to top. */}
+        <div className="relative h-[min(62dvh,720px)] w-full overflow-hidden bg-white sm:h-[min(68dvh,800px)]">
+          <Image
+            src={src}
+            alt=""
+            fill
+            sizes="(max-width: 640px) 100vw, (max-width: 920px) 90vw, 920px"
+            className="object-contain object-top"
+            priority={index === 0}
+            unoptimized={src.endsWith(".gif")}
+          />
+        </div>
       </div>
 
       <button
         type="button"
-        className={`${btnClass} left-2 sm:left-3`}
+        className={`${btnClass} left-[max(0.5rem,env(safe-area-inset-left))]`}
         aria-label="Previous image"
         onClick={goPrev}
       >
@@ -88,7 +91,7 @@ export default function RitualsBookGallery() {
       </button>
       <button
         type="button"
-        className={`${btnClass} right-2 sm:right-3`}
+        className={`${btnClass} right-[max(0.5rem,env(safe-area-inset-right))]`}
         aria-label="Next image"
         onClick={goNext}
       >
