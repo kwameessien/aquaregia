@@ -8,7 +8,7 @@ const blurbClass =
   "font-site-nav text-[9px] font-normal uppercase tracking-[0.08em] leading-[1.5] text-black sm:text-[10px] sm:tracking-[0.06em]";
 
 const specsClass =
-  "font-site-nav text-[8px] font-normal uppercase tracking-[0.08em] leading-[1.55] text-black sm:text-[9px] sm:leading-[1.5]";
+  "font-site-nav text-[8px] font-normal tracking-[0.02em] leading-[1.55] text-black sm:text-[9px] sm:leading-[1.5]";
 
 const cartClass =
   "font-site-nav text-[9px] font-normal tracking-[0.12em] text-black no-underline decoration-black underline-offset-[3px] decoration-1 transition-[text-decoration-color] hover:underline sm:text-[10px] bg-transparent p-0 cursor-pointer border-0 text-left lg:text-right";
