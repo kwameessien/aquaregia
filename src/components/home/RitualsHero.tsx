@@ -13,7 +13,7 @@ export default function RitualsHero() {
           width={640}
           height={640}
           unoptimized
-          className="pointer-events-none absolute top-1/2 left-1/2 z-0 h-auto w-[min(74vw,420px)] max-w-none -translate-x-1/2 -translate-y-1/2 object-contain blur-[2px] opacity-[0.42] select-none lg:w-[min(64vw,520px)]"
+          className="pointer-events-none absolute top-1/2 left-1/2 z-0 h-auto w-[min(82vw,480px)] max-w-none -translate-x-1/2 -translate-y-1/2 object-contain blur-[2px] opacity-[0.42] select-none lg:w-[min(72vw,600px)]"
           aria-hidden
         />
         <h1 className="font-times-now-semi-light relative z-10 w-full text-center text-[clamp(22px,3.7vw,42px)] leading-[1.42] tracking-[-0.014em] text-black">
