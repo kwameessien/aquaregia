@@ -1,7 +1,7 @@
 import Link from "next/link";
 
 const linkClassName =
-  "font-site-nav text-[13px] font-normal uppercase tracking-[0.12em] text-black no-underline transition-colors hover:underline hover:decoration-black hover:decoration-1 hover:underline-offset-[3px] sm:text-[14px]";
+  "font-site-nav text-[13px] font-normal uppercase tracking-[0.07em] text-black no-underline transition-colors hover:underline hover:decoration-black hover:decoration-1 hover:underline-offset-[3px] sm:text-[14px]";
 
 export default function RitualsPreorderCta() {
   return (
