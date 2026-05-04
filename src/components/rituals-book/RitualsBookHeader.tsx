@@ -3,7 +3,7 @@ import Link from "next/link";
 
 export default function RitualsBookHeader() {
   return (
-    <header className="bg-white">
+    <header className="sticky top-0 z-30 w-full shrink-0 bg-white">
       <div className="flex flex-col items-center px-[12px] pb-[12px] pt-[10px] sm:pb-[14px]">
         <Link href="/" className="block" aria-label="Aqua Regia home">
           <Image
