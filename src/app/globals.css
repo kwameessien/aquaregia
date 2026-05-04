@@ -24,16 +24,23 @@ body {
   font-family: "Times Now", ui-serif, Georgia, "Times New Roman", serif;
 }
 
-/* Times Now Light (matches TimesNow-Light @font-face, weight 300) */
+/* Times Now display light: family Times Now + 300 maps to SemiLight files in stylesheet.css */
 .font-times-now-light {
   font-family: "Times Now", ui-serif, Georgia, "Times New Roman", serif;
   font-weight: 300;
   font-style: normal;
 }
 
-/* Times Now SemiLight — @font-face in /fonts/stylesheet.css (family "Times Now SemiLight") */
+/* Times Now SemiLight — same cut as Times Now 300; explicit family + normal weight */
 .font-times-now-semi-light {
   font-family: "Times Now SemiLight", "Times Now", ui-serif, Georgia, "Times New Roman", serif;
+  font-weight: normal;
+  font-style: normal;
+}
+
+/* True Light master (TimesNow-Light* files); use when you need Light, not SemiLight */
+.font-times-now-type-light {
+  font-family: "Times Now Light", "Times Now", ui-serif, Georgia, "Times New Roman", serif;
   font-weight: normal;
   font-style: normal;
 }

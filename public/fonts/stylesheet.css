@@ -1,7 +1,9 @@
 /*
  * Times Now — add matching .woff2 / .woff / .ttf under public/fonts/ (served as /fonts/…).
- * Single `src` line, woff2 → woff → ttf. “Times Now” weight 300 normal uses Light files only;
- * use family "Times Now SemiLight" for the SemiLight cut.
+ * Single src line, woff2 -> woff -> ttf.
+ * "Times Now" + font-weight 300 + normal -> SemiLight files (e.g. .font-times-now-light).
+ * Family "Times Now SemiLight" is the same cut at CSS weight normal.
+ * "Times Now Light" is the Light master when you need Light instead of SemiLight.
  */
 @font-face {
     font-family: 'Times Now SemiLight';
@@ -14,6 +16,19 @@
         url('/fonts/TimesNow-SemiLight.woff2') format('woff2'),
         url('/fonts/TimesNow-SemiLight.woff') format('woff'),
         url('/fonts/TimesNow-SemiLight.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'Times Now SemiLight';
+    font-weight: normal;
+    font-style: italic;
+    font-display: swap;
+    src:
+        local('Times Now SemiLight Italic'),
+        local('TimesNow-SemiLightItalic'),
+        url('/fonts/TimesNow-SemiLightItalic.woff2') format('woff2'),
+        url('/fonts/TimesNow-SemiLightItalic.woff') format('woff'),
+        url('/fonts/TimesNow-SemiLightItalic.ttf') format('truetype');
 }
 
 @font-face {
@@ -66,19 +81,6 @@
         url('/fonts/TimesNow-SemiBoldItalic.woff2') format('woff2'),
         url('/fonts/TimesNow-SemiBoldItalic.woff') format('woff'),
         url('/fonts/TimesNow-SemiBoldItalic.ttf') format('truetype');
-}
-
-@font-face {
-    font-family: 'Times Now';
-    font-weight: 300;
-    font-style: italic;
-    font-display: swap;
-    src:
-        local('Times Now SemiLight Italic'),
-        local('TimesNow-SemiLightItalic'),
-        url('/fonts/TimesNow-SemiLightItalic.woff2') format('woff2'),
-        url('/fonts/TimesNow-SemiLightItalic.woff') format('woff'),
-        url('/fonts/TimesNow-SemiLightItalic.ttf') format('truetype');
 }
 
 @font-face {
@@ -152,9 +154,35 @@
     font-style: normal;
     font-display: swap;
     src:
+        local('Times Now SemiLight'),
+        local('TimesNow-SemiLight'),
+        url('/fonts/TimesNow-SemiLight.woff2') format('woff2'),
+        url('/fonts/TimesNow-SemiLight.woff') format('woff'),
+        url('/fonts/TimesNow-SemiLight.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'Times Now Light';
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+    src:
         local('Times Now Light'),
         local('TimesNow-Light'),
         url('/fonts/TimesNow-Light.woff2') format('woff2'),
         url('/fonts/TimesNow-Light.woff') format('woff'),
         url('/fonts/TimesNow-Light.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'Times Now Light';
+    font-weight: normal;
+    font-style: italic;
+    font-display: swap;
+    src:
+        local('Times Now Light Italic'),
+        local('TimesNow-LightItalic'),
+        url('/fonts/TimesNow-LightItalic.woff2') format('woff2'),
+        url('/fonts/TimesNow-LightItalic.woff') format('woff'),
+        url('/fonts/TimesNow-LightItalic.ttf') format('truetype');
 }
