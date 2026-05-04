@@ -75,7 +75,7 @@ export default function RitualsBookGallery() {
             fill
             sizes="(max-width: 640px) 100vw, (max-width: 920px) 90vw, 920px"
             className="object-contain object-top"
-            priority={index === 0}
+            priority={index === 0 || src.endsWith(".gif")}
             unoptimized={src.endsWith(".gif")}
           />
         </div>
