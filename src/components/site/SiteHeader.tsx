@@ -14,8 +14,8 @@ export default function SiteHeader() {
         <Image
           src="/assets/images/logos/AR-finalfinal.svg"
           alt=""
-          width={64}
-          height={43}
+          width={56}
+          height={37}
           className="h-auto w-[42px] select-none sm:w-[48px]"
           priority
         />
