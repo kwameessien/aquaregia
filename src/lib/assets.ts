@@ -5,6 +5,7 @@ export const ritualsBookSpinGifUrl =
   "/assets/images/gallery/looped%20rituals%20book%20spin%20compressed.gif";
 
 const ritualsGalleryFilenames = [
+  "looped rituals book spin compressed.gif",
   "androids_2.jpg",
   "androids1.png",
   "bedtimestories_1.jpg",
@@ -12,7 +13,6 @@ const ritualsGalleryFilenames = [
   "concertina_1.jpg",
   "concertina_2.jpg",
   "luckystar1.png",
-  "looped rituals book spin compressed.gif",
   "poem.jpg",
   "scripture_1.jpg",
   "scripture_2.jpg",

@@ -1,7 +1,7 @@
 "use client";
 
 import Image from "next/image";
-import { useCallback, useState } from "react";
+import { useCallback, useEffect, useState } from "react";
 
 import { ritualsGalleryImageUrls } from "@/lib/assets";
 
@@ -61,6 +61,18 @@ export default function RitualsBookGallery() {
 
   const goNext = useCallback(() => {
     setIndex((i) => (i + 1) % n);
+  }, [n]);
+
+  useEffect(() => {
+    if (n <= 1) return;
+    const reduced = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+    if (reduced) return;
+
+    const intervalMs = 5000;
+    const id = window.setInterval(() => {
+      setIndex((i) => (i + 1) % n);
+    }, intervalMs);
+    return () => window.clearInterval(id);
   }, [n]);
 
   return (
