@@ -1,11 +1,10 @@
 import Image from "next/image";
 
-import RitualsPreorderCta from "@/components/home/RitualsPreorderCta";
 import { ritualsBookSpinGifUrl } from "@/lib/assets";
 
 export default function RitualsHero() {
   return (
-    <section className="flex w-full flex-col gap-[60px] px-[20px] py-[24px] sm:gap-20 sm:px-[32px] sm:py-[32px] lg:gap-28 xl:gap-36 2xl:gap-44">
+    <section className="w-full px-[20px] pt-[24px] pb-0 sm:px-[32px] sm:pt-[32px]">
       <div className="relative isolate mx-auto w-full pt-[20px] sm:pt-[28px]">
         <Image
           src={ritualsBookSpinGifUrl}
@@ -25,7 +24,6 @@ export default function RitualsHero() {
           Regia, 2026.
         </h1>
       </div>
-      <RitualsPreorderCta />
     </section>
   );
 }
