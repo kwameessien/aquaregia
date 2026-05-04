@@ -6,7 +6,7 @@ import { useCallback, useState } from "react";
 import { ritualsGalleryImageUrls } from "@/lib/assets";
 
 const btnClass =
-  "absolute top-1/2 z-10 flex h-10 w-10 -translate-y-1/2 items-center justify-center rounded-full border-0 bg-neutral-500/30 text-white transition-colors hover:bg-neutral-500/45 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-black sm:h-11 sm:w-11";
+  "absolute top-1/2 z-10 flex h-10 w-10 -translate-y-1/2 items-center justify-center rounded-full border-0 bg-neutral-500/30 text-white opacity-100 transition-[opacity,background-color] duration-200 hover:bg-neutral-500/45 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-black [@media(hover:hover)]:opacity-0 [@media(hover:hover)]:group-hover:opacity-100 [@media(hover:hover)]:focus-visible:opacity-100 sm:h-11 sm:w-11";
 
 function ChevronLeft({ className }: { className?: string }) {
   return (
@@ -64,7 +64,7 @@ export default function RitualsBookGallery() {
   }, [n]);
 
   return (
-    <div className="relative left-1/2 w-screen max-w-[100vw] -translate-x-1/2">
+    <div className="group relative left-1/2 w-screen max-w-[100vw] -translate-x-1/2">
       {/* Full-bleed wrapper so prev/next sit on the viewport edges; image stays centered. */}
       <div className="relative mx-auto w-full max-w-[min(100%,920px)]">
         {/* Tall aspect + object-center created huge letterboxing above each slide; cap height and pin to top. */}
