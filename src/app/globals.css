@@ -24,7 +24,7 @@ body {
   font-family: "Times Now", ui-serif, Georgia, "Times New Roman", serif;
 }
 
-/* Times Now display light: family Times Now + 300 maps to SemiLight files in stylesheet.css */
+/* Times Now display light: Times Now + weight 300 -> SemiLight assets (normal + italic) */
 .font-times-now-light {
   font-family: "Times Now", ui-serif, Georgia, "Times New Roman", serif;
   font-weight: 300;

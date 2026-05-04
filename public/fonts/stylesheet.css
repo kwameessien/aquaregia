@@ -1,7 +1,7 @@
 /*
  * Times Now — add matching .woff2 / .woff / .ttf under public/fonts/ (served as /fonts/…).
  * Single src line, woff2 -> woff -> ttf.
- * "Times Now" + font-weight 300 + normal -> SemiLight files (e.g. .font-times-now-light).
+ * "Times Now" + font-weight 300 -> SemiLight files (normal and italic; e.g. .font-times-now-light).
  * Family "Times Now SemiLight" is the same cut at CSS weight normal.
  * "Times Now Light" is the Light master when you need Light instead of SemiLight.
  */
@@ -37,11 +37,11 @@
     font-style: italic;
     font-display: swap;
     src:
-        local('Times Now Light Italic'),
-        local('TimesNow-LightItalic'),
-        url('/fonts/TimesNow-LightItalic.woff2') format('woff2'),
-        url('/fonts/TimesNow-LightItalic.woff') format('woff'),
-        url('/fonts/TimesNow-LightItalic.ttf') format('truetype');
+        local('Times Now SemiLight Italic'),
+        local('TimesNow-SemiLightItalic'),
+        url('/fonts/TimesNow-SemiLightItalic.woff2') format('woff2'),
+        url('/fonts/TimesNow-SemiLightItalic.woff') format('woff'),
+        url('/fonts/TimesNow-SemiLightItalic.ttf') format('truetype');
 }
 
 @font-face {
