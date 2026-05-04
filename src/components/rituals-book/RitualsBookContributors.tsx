@@ -54,7 +54,7 @@ const contributors = [
 export default function RitualsBookContributors() {
   return (
     <section
-      className="mx-auto mt-[36px] flex w-full max-w-[min(100%,920px)] flex-col items-center text-center sm:mt-[44px] lg:mt-[52px]"
+      className="mx-auto mt-[16px] flex w-full max-w-[min(100%,920px)] flex-col items-center text-center sm:mt-[20px] lg:mt-[24px]"
       aria-labelledby="rituals-book-contributors-heading"
     >
       <h2 id="rituals-book-contributors-heading" className={`${headingClass} m-0`}>
