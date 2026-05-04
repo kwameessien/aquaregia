@@ -10,7 +10,7 @@ export default function InfoPage() {
       <div className="flex min-h-0 w-full flex-1 flex-col px-[20px] pb-[16px] pt-[48px] sm:px-[32px]">
         <div className="flex min-h-0 flex-1 flex-col">
           <div className="flex min-h-0 flex-1 flex-col items-center justify-center">
-            <div className="flex w-full flex-col gap-[clamp(48px,12vh,120px)]">
+            <div className="flex w-full flex-col gap-[clamp(36px,9vh,96px)]">
               {/* Intro spans full padded width; contact uses a centered max-width column. */}
               <InfoIntro />
               <div className="flex w-full flex-col items-center">
