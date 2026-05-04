@@ -4,7 +4,7 @@ import { ritualsBookSpinGifUrl } from "@/lib/assets";
 
 export default function RitualsHero() {
   return (
-    <section className="w-full px-[20px] pt-[24px] pb-0 sm:px-[32px] sm:pt-[32px]">
+    <section className="w-full px-[20px] py-0 sm:px-[32px]">
       <div className="relative isolate mx-auto w-full pt-[20px] sm:pt-[28px]">
         <Image
           src={ritualsBookSpinGifUrl}
