@@ -16,7 +16,7 @@ const cartClass =
 export default function RitualsBookProductBar() {
   return (
     <section className="w-full shrink-0 bg-white">
-      <div className="px-[12px] pb-[4px] pt-[12px] sm:px-[16px] sm:pb-[6px] sm:pt-[14px] lg:px-[20px] lg:pb-[6px]">
+      <div className="px-[12px] py-[6px] sm:px-[16px] sm:py-[8px] lg:px-[20px] lg:py-[8px]">
         <div className="flex flex-col gap-[14px] lg:flex-row lg:items-stretch lg:justify-between lg:gap-3 xl:gap-4">
           <div className="flex w-full shrink-0 flex-col gap-[12px] self-stretch sm:gap-[14px] lg:max-w-[min(100%,240px)] lg:min-h-0 lg:justify-between lg:gap-0">
             <h2 className={titleClass}>Rituals</h2>
