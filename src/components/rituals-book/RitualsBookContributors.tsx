@@ -1,11 +1,11 @@
 const headingClass =
-  "font-site-nav text-[11px] font-normal uppercase tracking-[0.12em] text-black sm:text-[12px]";
+  "font-site-nav text-[11px] font-normal uppercase tracking-[0.07em] text-black sm:text-[12px]";
 
 const namesClass =
-  "font-site-nav text-[9px] font-normal tracking-[0.03em] leading-[1.55] text-black sm:text-[10px] sm:leading-[1.5]";
+  "font-site-nav text-[9px] font-normal tracking-[0.02em] leading-[1.5] text-black sm:text-[10px] sm:leading-[1.48]";
 
 const footnoteClass =
-  "font-site-nav text-[8px] font-normal tracking-[0.02em] leading-[1.55] text-black sm:text-[9px] sm:leading-[1.5]";
+  "font-site-nav text-[8px] font-normal tracking-[0.01em] leading-[1.5] text-black sm:text-[9px] sm:leading-[1.48]";
 
 const contributors = [
   "Katrin Braga",
