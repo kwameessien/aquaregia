@@ -1,5 +1,5 @@
 const listTextClass =
-  "font-site-nav text-[13px] font-normal uppercase tracking-[0.12em] text-black sm:text-[14px]";
+  "font-site-nav text-[13px] font-normal uppercase tracking-[0.07em] text-black sm:text-[14px]";
 
 const stockists = [
   "Offbrand Library",
