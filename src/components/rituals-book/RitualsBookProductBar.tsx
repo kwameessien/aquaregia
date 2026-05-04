@@ -1,27 +1,27 @@
 import Link from "next/link";
 
 const titleClass =
-  "font-site-nav text-[11px] font-normal uppercase tracking-[0.12em] text-black sm:text-[12px]";
+  "font-site-nav text-[11px] font-normal uppercase tracking-[0.07em] text-black sm:text-[12px]";
 
 const introClass =
-  "font-site-nav text-[9px] font-normal tracking-[0.04em] leading-[1.5] text-black sm:text-[10px]";
+  "font-site-nav text-[9px] font-normal tracking-[0.03em] leading-[1.5] text-black sm:text-[10px]";
 
 const blurbClass =
-  "font-site-nav text-[9px] font-normal uppercase tracking-[0.08em] leading-[1.5] text-black sm:text-[10px] sm:tracking-[0.06em]";
+  "font-site-nav text-[9px] font-normal uppercase tracking-[0.055em] leading-[1.5] text-black sm:text-[10px] sm:tracking-[0.05em]";
 
 const specsClass =
-  "font-site-nav text-[8px] font-normal tracking-[0.02em] leading-[1.55] text-black sm:text-[9px] sm:leading-[1.5]";
+  "font-site-nav text-[8px] font-normal tracking-[0.01em] leading-[1.55] text-black sm:text-[9px] sm:leading-[1.5]";
 
 const cartClass =
-  "font-site-nav text-[11px] font-normal tracking-[0.12em] text-black no-underline decoration-black underline-offset-[3px] decoration-1 transition-[text-decoration-color] hover:underline sm:text-[12px] bg-transparent p-0 cursor-pointer border-0 text-left lg:text-right";
+  "font-site-nav text-[11px] font-normal tracking-[0.07em] text-black no-underline decoration-black underline-offset-[3px] decoration-1 transition-[text-decoration-color] hover:underline sm:text-[12px] bg-transparent p-0 cursor-pointer border-0 text-left lg:text-right";
 
 const purchaseBadgeClass =
-  "block w-full border border-black px-[12px] py-[6px] text-center font-site-nav text-[8px] font-normal uppercase tracking-[0.14em] text-neutral-600 no-underline transition-[color,background-color] duration-200 ease-out hover:bg-black hover:text-white sm:text-[9px] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-black";
+  "block w-full border border-black px-[12px] py-[6px] text-center font-site-nav text-[8px] font-normal uppercase tracking-[0.07em] text-neutral-600 no-underline transition-[color,background-color] duration-200 ease-out hover:bg-black hover:text-white sm:text-[9px] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-black";
 
 export default function RitualsBookProductBar() {
   return (
     <section className="w-full shrink-0 bg-white">
-      <div className="px-[12px] py-[6px] sm:px-[16px] sm:py-[8px] lg:px-[20px] lg:py-[8px]">
+      <div className="px-[12px] py-[8px] sm:px-[16px] sm:py-[10px] lg:px-[20px] lg:py-[10px]">
         <div className="flex flex-col gap-[14px] lg:flex-row lg:items-stretch lg:justify-between lg:gap-3 xl:gap-4">
           <div className="flex w-full shrink-0 flex-col gap-[12px] self-stretch sm:gap-[14px] lg:max-w-[min(100%,240px)] lg:min-h-0 lg:justify-between lg:gap-0">
             <h2 className={titleClass}>Rituals</h2>
