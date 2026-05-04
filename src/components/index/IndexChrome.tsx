@@ -5,7 +5,7 @@ const navLinkClass =
 
 export default function IndexChrome() {
   return (
-    <div className="w-full shrink-0 px-[16px] sm:px-[24px]">
+    <div className="w-full shrink-0 px-[12px] sm:px-[16px]">
       <div className="flex w-full items-baseline justify-between pb-[10px] pt-[12px] sm:pt-[14px]">
         <Link href="/" className={navLinkClass}>
           Project
