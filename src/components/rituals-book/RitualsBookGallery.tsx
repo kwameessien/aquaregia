@@ -54,6 +54,7 @@ export default function RitualsBookGallery() {
   const [index, setIndex] = useState(0);
   const n = ritualsGalleryImageUrls.length;
   const src = ritualsGalleryImageUrls[index]!;
+  const imagePriority = index === 0 || src.endsWith(".gif");
 
   const goPrev = useCallback(() => {
     setIndex((i) => (i - 1 + n) % n);
@@ -87,7 +88,8 @@ export default function RitualsBookGallery() {
             fill
             sizes="(max-width: 640px) 100vw, (max-width: 920px) 90vw, 920px"
             className="object-contain object-top"
-            priority={index === 0 || src.endsWith(".gif")}
+            priority={imagePriority}
+            loading={imagePriority ? "eager" : "lazy"}
             unoptimized={src.endsWith(".gif")}
           />
         </div>
