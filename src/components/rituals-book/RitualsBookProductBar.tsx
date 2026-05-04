@@ -1,3 +1,5 @@
+import Link from "next/link";
+
 const titleClass =
   "font-site-nav text-[11px] font-normal uppercase tracking-[0.12em] text-black sm:text-[12px]";
 
@@ -13,6 +15,9 @@ const specsClass =
 const cartClass =
   "font-site-nav text-[11px] font-normal tracking-[0.12em] text-black no-underline decoration-black underline-offset-[3px] decoration-1 transition-[text-decoration-color] hover:underline sm:text-[12px] bg-transparent p-0 cursor-pointer border-0 text-left lg:text-right";
 
+const purchaseBadgeClass =
+  "block w-full border border-black px-[12px] py-[6px] text-center font-site-nav text-[8px] font-normal uppercase tracking-[0.14em] text-neutral-600 no-underline transition-[color,background-color] duration-200 ease-out hover:bg-black hover:text-white sm:text-[9px] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-black";
+
 export default function RitualsBookProductBar() {
   return (
     <section className="w-full shrink-0 bg-white">
@@ -20,9 +25,9 @@ export default function RitualsBookProductBar() {
         <div className="flex flex-col gap-[14px] lg:flex-row lg:items-stretch lg:justify-between lg:gap-3 xl:gap-4">
           <div className="flex w-full shrink-0 flex-col gap-[12px] self-stretch sm:gap-[14px] lg:max-w-[min(100%,240px)] lg:min-h-0 lg:justify-between lg:gap-0">
             <h2 className={titleClass}>Rituals</h2>
-            <span className="block w-full border border-black px-[12px] py-[6px] text-center font-site-nav text-[8px] font-normal uppercase tracking-[0.14em] text-neutral-600 sm:text-[9px]">
-              Coming soon
-            </span>
+            <Link href="/stockists" className={purchaseBadgeClass}>
+              Purchase here
+            </Link>
           </div>
 
           <div className={`${specsClass} flex shrink-0 flex-col gap-[10px] sm:gap-[12px] lg:max-w-[220px]`}>
