@@ -3,7 +3,7 @@ import {structureTool} from 'sanity/structure'
 import {visionTool} from '@sanity/vision'
 import {schemaTypes} from './schemaTypes'
 
-const singletonTypes = new Set(['homePage'])
+const singletonTypes = new Set(['homePage', 'infoPage'])
 
 const projectId = process.env.SANITY_STUDIO_PROJECT_ID
 const dataset = process.env.SANITY_STUDIO_DATASET || 'production'
@@ -35,8 +35,16 @@ export default defineConfig({
                   .schemaType('homePage')
                   .documentId('homePage'),
               ),
+            S.listItem()
+              .title('Info Page')
+              .id('infoPage')
+              .child(
+                S.document()
+                  .schemaType('infoPage')
+                  .documentId('infoPage'),
+              ),
             ...S.documentTypeListItems().filter(
-              (item) => item.getId() !== 'homePage',
+              (item) => item.getId() !== 'homePage' && item.getId() !== 'infoPage',
             ),
           ]),
     }),
