@@ -34,7 +34,7 @@ export const productType = defineType({
       name: 'purchaseLabel',
       title: 'Purchase Button Label',
       type: 'string',
-      initialValue: 'Purchase here',
+      initialValue: 'Add to cart',
     }),
     defineField({
       name: 'purchaseLink',

@@ -31,7 +31,7 @@ type RitualsBookProductBarProps = {
 
 export default function RitualsBookProductBar({
   sectionTitle = "Rituals",
-  purchaseLabel = "Purchase here",
+  purchaseLabel = "Add to cart",
   purchaseLink = "/stockists",
   specs = "180 pages\nSwiss bound, Smythe sewn\nDie-cut gatefold covers\n200 x 270 mm",
   isbnCopyright = "ISBN 978 1-069245-0-0\n© 2026",
