@@ -2,7 +2,7 @@ import Image from "next/image";
 import Link from "next/link";
 
 const navClass =
-  "font-site-nav text-[11px] font-normal uppercase tracking-[0.12em] text-black sm:text-[12px]";
+  "font-site-nav text-[13px] font-normal uppercase tracking-[0.12em] text-black md:text-[14px]";
 
 const linkClass =
   "text-black no-underline decoration-black underline-offset-[3px] decoration-1 transition-[text-decoration-color] hover:underline";
@@ -14,9 +14,9 @@ export default function SiteHeader() {
         <Image
           src="/assets/images/logos/AR-finalfinal.svg"
           alt=""
-          width={56}
-          height={37}
-          className="h-auto w-[42px] select-none sm:w-[48px]"
+          width={64}
+          height={42}
+          className="h-auto w-[48px] select-none md:w-[56px]"
           priority
         />
       </Link>
