@@ -1,5 +1,6 @@
 import InfoPage from "@/components/pages/InfoPage";
-import { client } from "@/sanity/client";
+import { getClient } from "@/sanity/client";
+import { draftMode } from "next/headers";
 
 const INFO_PAGE_QUERY = `*[
   _type == "infoPage"
@@ -13,15 +14,20 @@ const INFO_PAGE_QUERY = `*[
   }
 }`;
 
-const options = { next: { revalidate: 30 } };
-
 export default async function Page() {
-  const infoPage = await client.fetch<
+  const { isEnabled } = await draftMode();
+  const shouldUseDrafts = isEnabled || process.env.NODE_ENV === "development";
+
+  const infoPage = await getClient(shouldUseDrafts).fetch<
     {
       infoIntro?: string;
       infoContact?: Array<{ label?: string; url?: string; openInNewTab?: boolean }>;
     } | null
-  >(INFO_PAGE_QUERY, {}, options);
+  >(
+    INFO_PAGE_QUERY,
+    {},
+    shouldUseDrafts ? { cache: "no-store" } : { next: { revalidate: 30 } },
+  );
 
   return <InfoPage infoPage={infoPage ?? undefined} />;
 }

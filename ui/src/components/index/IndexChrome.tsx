@@ -16,12 +16,9 @@ export default function IndexChrome() {
       </div>
       <div className="h-px w-full bg-black" aria-hidden />
       <div className="flex w-full justify-center py-[14px] sm:py-[16px]">
-        <p className={`${navLinkClass} text-center`}>
-          Rituals (2026) —{" "}
-          <Link href="/rituals-book" className={navLinkClass}>
-            Buy here
-          </Link>
-        </p>
+        <Link href="/rituals-book" className={`${navLinkClass} text-center`}>
+          Rituals (2026) — Buy here
+        </Link>
       </div>
       <div className="h-px w-full bg-black" aria-hidden />
     </div>
