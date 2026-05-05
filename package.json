@@ -1,34 +1,17 @@
 {
-  "name": "aquaregia",
-  "version": "0.1.0",
+  "name": "aquaregia-monorepo",
   "private": true,
+  "workspaces": [
+    "ui",
+    "cms"
+  ],
   "scripts": {
-    "dev": "next dev",
-    "build": "next build",
-    "start": "next start",
-    "lint": "eslint",
-    "studio": "npm run dev --prefix sanity",
-    "studio:build": "npm run build --prefix sanity",
-    "studio:deploy": "npm run deploy --prefix sanity"
-  },
-  "dependencies": {
-    "@sanity/image-url": "^2.1.1",
-    "@stripe/react-stripe-js": "^6.3.0",
-    "@stripe/stripe-js": "^9.4.0",
-    "next": "16.2.4",
-    "next-sanity": "^12.4.0",
-    "react": "19.2.4",
-    "react-dom": "19.2.4"
+    "build": "turbo run build",
+    "dev": "turbo run dev",
+    "start": "turbo run start"
   },
   "devDependencies": {
-    "@tailwindcss/postcss": "^4",
-    "@tailwindcss/typography": "^0.5.19",
-    "@types/node": "^20",
-    "@types/react": "^19",
-    "@types/react-dom": "^19",
-    "eslint": "^9",
-    "eslint-config-next": "16.2.4",
-    "tailwindcss": "^4",
-    "typescript": "^5"
-  }
+    "turbo": "^2.9.9"
+  },
+  "packageManager": "npm@11.6.2"
 }

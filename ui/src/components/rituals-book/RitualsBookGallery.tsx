@@ -50,10 +50,20 @@ function ChevronRight({ className }: { className?: string }) {
   );
 }
 
-export default function RitualsBookGallery() {
+type RitualsBookGalleryProps = {
+  images?: Array<{ url: string; alt?: string }>;
+};
+
+export default function RitualsBookGallery({ images }: RitualsBookGalleryProps) {
+  const resolvedImages =
+    images && images.length > 0
+      ? images
+      : ritualsGalleryImageUrls.map((url) => ({ url, alt: "" }));
+
   const [index, setIndex] = useState(0);
-  const n = ritualsGalleryImageUrls.length;
-  const src = ritualsGalleryImageUrls[index]!;
+  const n = resolvedImages.length;
+  const activeImage = resolvedImages[index]!;
+  const src = activeImage.url;
   const imagePriority = index === 0 || src.endsWith(".gif");
 
   const goPrev = useCallback(() => {
@@ -84,7 +94,7 @@ export default function RitualsBookGallery() {
         <div className="relative h-[min(62dvh,720px)] w-full overflow-hidden bg-white sm:h-[min(68dvh,800px)]">
           <Image
             src={src}
-            alt=""
+            alt={activeImage.alt ?? ""}
             fill
             sizes="(max-width: 640px) 100vw, (max-width: 920px) 90vw, 920px"
             className="object-contain object-top"
