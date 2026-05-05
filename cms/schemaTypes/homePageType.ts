@@ -22,5 +22,11 @@ export const homePageType = defineType({
       type: 'text',
       rows: 3,
     }),
+    defineField({
+      name: 'orderLabel',
+      title: 'Order Label',
+      type: 'string',
+      initialValue: 'ORDER HERE',
+    }),
   ],
 })
