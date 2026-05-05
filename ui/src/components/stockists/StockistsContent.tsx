@@ -29,8 +29,8 @@ export default function StockistsContent({
     <div className="mx-auto w-full max-w-md text-center">
       <h1 className={`${listTextClass} mb-[1.125rem]`}>{header}</h1>
       <ul className={`${listTextClass} m-0 list-none p-0 leading-none`}>
-        {displayStockists.map((item) => (
-          <li key={`${item.name}-${item.url ?? "no-url"}`} className="m-0 p-0">
+        {displayStockists.map((item, index) => (
+          <li key={`${item.name}-${item.url ?? "no-url"}-${index}`} className="m-0 p-0">
             {item.url ? (
               <a href={item.url} className="text-inherit no-underline hover:underline">
                 {item.name}
