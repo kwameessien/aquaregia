@@ -6,8 +6,7 @@ const HOME_PAGE_QUERY = `*[
   _type == "homePage"
   && _id == "homePage"
 ][0]{
-  heroHeading,
-  heroSubheading,
+  heroText,
   orderLabel
 }`;
 
@@ -20,7 +19,7 @@ const options = { next: { revalidate: 30 } };
 
 export default async function Page() {
   const homePage = await client.fetch<
-    { heroHeading?: string; heroSubheading?: string; orderLabel?: string } | null
+    { heroText?: string; orderLabel?: string } | null
   >(HOME_PAGE_QUERY, {}, options);
   const posts = await client.fetch<SanityDocument[]>(POSTS_QUERY, {}, options);
   return <HomePage posts={posts} homePage={homePage ?? undefined} />;

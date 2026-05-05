@@ -12,15 +12,10 @@ export const homePageType = defineType({
       validation: (rule) => rule.required(),
     }),
     defineField({
-      name: 'heroHeading',
-      title: 'Hero Heading',
-      type: 'string',
-    }),
-    defineField({
-      name: 'heroSubheading',
-      title: 'Hero Subheading',
+      name: 'heroText',
+      title: 'Hero Text',
       type: 'text',
-      rows: 3,
+      rows: 6,
     }),
     defineField({
       name: 'orderLabel',

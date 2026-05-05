@@ -8,8 +8,7 @@ import SiteHeader from "@/components/site/SiteHeader";
 type HomePageProps = {
   posts: SanityDocument[];
   homePage?: {
-    heroHeading?: string;
-    heroSubheading?: string;
+    heroText?: string;
     orderLabel?: string;
   };
 };
@@ -42,10 +41,7 @@ export default function HomePage({ posts, homePage }: HomePageProps) {
       <SiteHeader />
       <div className="flex min-h-0 flex-1 flex-col">
         <div className="flex min-h-0 w-full max-w-full flex-1 flex-col justify-center pt-[min(48px,8vh)] sm:pt-[min(64px,9vh)] lg:pt-[min(72px,10vh)]">
-          <RitualsHero
-            heroHeading={homePage?.heroHeading}
-            heroSubheading={homePage?.heroSubheading}
-          />
+          <RitualsHero heroText={homePage?.heroText} />
         </div>
         <div className="mt-[60px] w-full max-w-full shrink-0 px-[20px] pb-[24px] sm:mt-20 sm:px-[32px] sm:pb-[32px] lg:mt-28 xl:mt-36 2xl:mt-44">
           <RitualsPreorderCta label={homePage?.orderLabel} />
