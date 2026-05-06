@@ -15,6 +15,8 @@ export default function RootLayout({
     <html lang="en">
       <head>
         <link rel="stylesheet" href="/fonts/stylesheet.css" />
+        {/* Adobe Fonts / Typekit — Neue Haas Grotesk (display + text) */}
+        <link rel="stylesheet" href="https://use.typekit.net/qvp2xgk.css" />
       </head>
       <body className="min-h-screen antialiased">{children}</body>
     </html>

@@ -12,7 +12,11 @@
   --color-background: var(--background);
   --color-foreground: var(--foreground);
   --color-accent: var(--accent);
-  --font-site-nav: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  /* Adobe Fonts — neue-haas-grotesk-display-pr / neue-haas-grotesk-text-pro (Typekit kit qvp2xgk) */
+  --font-neue-haas-display: "neue-haas-grotesk-display-pr", sans-serif;
+  --font-neue-haas-text: "neue-haas-grotesk-text-pro", sans-serif;
+  /* Site chrome / nav — was Helvetica Neue; matches regular UI weight on Neue Haas Text */
+  --font-site-nav: var(--font-neue-haas-text);
 }
 
 body {
@@ -37,4 +41,21 @@ body {
   font-family: "Times Now SemiLight", "Times Now", ui-serif, Georgia, "Times New Roman", serif;
   font-weight: normal;
   font-style: normal;
+}
+
+/* Neue Haas Grotesk — loaded via Typekit (use.typekit.net/qvp2xgk.css) */
+.tk-neue-haas-grotesk-display-pr {
+  font-family: var(--font-neue-haas-display);
+}
+
+.tk-neue-haas-grotesk-text-pro {
+  font-family: var(--font-neue-haas-text);
+}
+
+.font-neue-haas-display {
+  font-family: var(--font-neue-haas-display);
+}
+
+.font-neue-haas-text {
+  font-family: var(--font-neue-haas-text);
 }
