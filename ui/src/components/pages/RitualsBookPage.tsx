@@ -34,7 +34,13 @@ const fallbackContributors =
 const fallbackShippingNote =
   "If your country is unavailable for shipment, please send us an email to";
 
-export default function RitualsBookPage({ content }: { content?: RitualsBookContent }) {
+export default function RitualsBookPage({
+  content,
+  stripeCheckout = process.env.NEXT_PUBLIC_STRIPE_CHECKOUT === "true",
+}: {
+  content?: RitualsBookContent;
+  stripeCheckout?: boolean;
+}) {
   const galleryImages =
     content?.galleryImages
       ?.map((image) => ({
@@ -49,6 +55,7 @@ export default function RitualsBookPage({ content }: { content?: RitualsBookCont
     >
       <RitualsBookHeader logoUrl={content?.headerLogoUrl} />
       <RitualsBookProductBar
+        stripeCheckout={stripeCheckout}
         sectionTitle={content?.sectionTitle}
         purchaseLabel={content?.purchaseLabel}
         purchaseLink={content?.purchaseLink}

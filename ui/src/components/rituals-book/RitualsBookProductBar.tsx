@@ -1,4 +1,4 @@
-import Link from "next/link";
+import RitualsBookPurchaseBadge from "@/components/rituals-book/RitualsBookPurchaseBadge";
 
 const titleClass =
   "font-site-nav text-[11px] font-normal uppercase tracking-[0.07em] text-black sm:text-[12px]";
@@ -19,6 +19,8 @@ const purchaseBadgeClass =
   "block w-full border border-black px-[12px] py-[6px] text-center font-site-nav text-[8px] font-normal uppercase tracking-[0.07em] text-neutral-600 no-underline transition-[color,background-color] duration-200 ease-out hover:bg-black hover:text-white sm:text-[9px] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-black";
 
 type RitualsBookProductBarProps = {
+  /** When true, “Add to cart” opens Stripe Checkout (server must have Stripe env vars). */
+  stripeCheckout?: boolean;
   sectionTitle?: string;
   purchaseLabel?: string;
   purchaseLink?: string;
@@ -30,6 +32,7 @@ type RitualsBookProductBarProps = {
 };
 
 export default function RitualsBookProductBar({
+  stripeCheckout = false,
   sectionTitle = "Rituals",
   purchaseLabel = "Add to cart",
   purchaseLink = "/stockists",
@@ -48,9 +51,12 @@ export default function RitualsBookProductBar({
         <div className="flex flex-col gap-[14px] lg:flex-row lg:items-stretch lg:justify-between lg:gap-3 xl:gap-4">
           <div className="flex w-full shrink-0 flex-col gap-[12px] self-stretch sm:gap-[14px] lg:max-w-[min(100%,240px)] lg:min-h-0 lg:justify-between lg:gap-0">
             <h2 className={titleClass}>{sectionTitle}</h2>
-            <Link href={purchaseLink} className={purchaseBadgeClass}>
-              {purchaseLabel}
-            </Link>
+            <RitualsBookPurchaseBadge
+              stripeCheckout={stripeCheckout}
+              purchaseLabel={purchaseLabel}
+              purchaseLink={purchaseLink}
+              className={purchaseBadgeClass}
+            />
           </div>
 
           <div className={`${specsClass} flex shrink-0 flex-col gap-[10px] sm:gap-[12px] lg:max-w-[220px]`}>
