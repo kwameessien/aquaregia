@@ -3,6 +3,9 @@ import RitualsBookPurchaseBadge from "@/components/rituals-book/RitualsBookPurch
 const titleClass =
   "font-site-nav text-[11px] font-normal uppercase tracking-[0.07em] text-black sm:text-[12px]";
 
+const priceClass =
+  "m-0 font-site-nav text-[11px] font-normal tracking-[0.03em] text-black sm:text-[12px]";
+
 const introClass =
   "font-site-nav text-[9px] font-normal tracking-[0.03em] leading-[1.5] text-black sm:text-[10px]";
 
@@ -22,6 +25,8 @@ type RitualsBookProductBarProps = {
   /** When true, “Add to cart” opens Stripe Checkout (server must have Stripe env vars). */
   stripeCheckout?: boolean;
   sectionTitle?: string;
+  /** Shown directly under the section title (e.g. `$85`). */
+  priceLine?: string;
   purchaseLabel?: string;
   purchaseLink?: string;
   specs?: string;
@@ -34,6 +39,7 @@ type RitualsBookProductBarProps = {
 export default function RitualsBookProductBar({
   stripeCheckout = false,
   sectionTitle = "Rituals",
+  priceLine = "$85",
   purchaseLabel = "Add to cart",
   purchaseLink = "/stockists",
   specs = "180 pages\nSwiss bound, Smythe sewn\nDie-cut gatefold covers\n200 x 270 mm",
@@ -50,7 +56,10 @@ export default function RitualsBookProductBar({
       <div className="px-[12px] py-[8px] sm:px-[16px] sm:py-[10px] lg:px-[20px] lg:py-[10px]">
         <div className="flex flex-col gap-[14px] lg:flex-row lg:items-stretch lg:justify-between lg:gap-3 xl:gap-4">
           <div className="flex w-full shrink-0 flex-col gap-[12px] self-stretch sm:gap-[14px] lg:max-w-[min(100%,240px)] lg:min-h-0 lg:justify-between lg:gap-0">
-            <h2 className={titleClass}>{sectionTitle}</h2>
+            <div className="flex flex-col items-start gap-[4px]">
+              <h2 className={`${titleClass} m-0`}>{sectionTitle}</h2>
+              {priceLine ? <p className={priceClass}>{priceLine}</p> : null}
+            </div>
             <RitualsBookPurchaseBadge
               stripeCheckout={stripeCheckout}
               purchaseLabel={purchaseLabel}
