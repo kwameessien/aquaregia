@@ -27,7 +27,7 @@ export type RitualsBookContent = {
 
 /** Reserve space so content clears the fixed footer (rule + row + safe area). */
 const ritualsBookMainBottomPad =
-  "pb-[calc(24px+48px+env(safe-area-inset-bottom,0px))] sm:pb-[calc(32px+52px+env(safe-area-inset-bottom,0px))]";
+  "pb-0 md:pb-[calc(24px+48px+env(safe-area-inset-bottom,0px))] lg:pb-[calc(32px+52px+env(safe-area-inset-bottom,0px))]";
 
 const fallbackContributors =
   "Katrin Braga, Sivan Miller, Fahim Kassam, Laura Baldwinson, Ryan Voigt, Nelson Huang, Alyx Karlier, Jay Kim Valentine, Maria Walton, Pele Olivia, Satchi Salubre, Erin Klassen, Venus Hermitant, Jian Qiao Lu, Tania Becker, Sophie Hartnett, Christopher Deagle, Kathy Nguyen, Taylor Chousky, Paula Lanzador, Alexis Shan, Promised Files, 11811 Casting, Legends Café, Monika Tischer, Tarah Doheny, Danielle Reynolds, Natalie Stasiak, Karita, Natalie Phang, Anna Biehunkova, Yousra, Virginia Liang, Christina Bowe, Rei Simpson, Nico Simpson, Alexis Purcell, Taimen Vigneault, Jasmine Oudendijk, Rembo Amanda, Valeriia Bereza";
