@@ -31,6 +31,13 @@ export const productType = defineType({
       initialValue: 'Rituals',
     }),
     defineField({
+      name: 'priceLine',
+      title: 'Price line',
+      description: 'Shown under the section title (e.g. $85). Leave empty to hide.',
+      type: 'string',
+      initialValue: '$85',
+    }),
+    defineField({
       name: 'purchaseLabel',
       title: 'Purchase Button Label',
       type: 'string',

@@ -7,6 +7,7 @@ import { ritualsGalleryImageUrls } from "@/lib/assets";
 
 export type RitualsBookContent = {
   sectionTitle?: string;
+  priceLine?: string;
   purchaseLabel?: string;
   purchaseLink?: string;
   specs?: string;
@@ -57,6 +58,9 @@ export default function RitualsBookPage({
       <RitualsBookProductBar
         stripeCheckout={stripeCheckout}
         sectionTitle={content?.sectionTitle}
+        priceLine={
+          content?.priceLine == null ? undefined : content.priceLine.trim()
+        }
         purchaseLabel={content?.purchaseLabel}
         purchaseLink={content?.purchaseLink}
         specs={content?.specs}

@@ -9,6 +9,7 @@ const PRODUCT_QUERY = `*[
   && slug.current == $slug
 ][0]{
   sectionTitle,
+  priceLine,
   purchaseLabel,
   purchaseLink,
   specs,
