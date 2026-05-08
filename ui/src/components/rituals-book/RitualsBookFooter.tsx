@@ -6,12 +6,16 @@ const linkClass =
 export default function RitualsBookFooter({
   backLinkLabel = "Go back",
   backLinkHref = "/",
+  className,
 }: {
   backLinkLabel?: string;
   backLinkHref?: string;
+  className?: string;
 }) {
   return (
-    <footer className="fixed bottom-0 left-0 right-0 z-30 bg-white">
+    <footer
+      className={`fixed bottom-0 left-0 right-0 z-30 bg-white ${className ?? ""}`}
+    >
       <div className="h-px w-full bg-black" aria-hidden />
       <div className="px-[12px] pb-[max(12px,env(safe-area-inset-bottom))] pt-[8px] sm:px-[20px] sm:pt-[10px] sm:pb-[max(14px,env(safe-area-inset-bottom))] lg:px-[28px]">
         <nav aria-label="Book page footer">

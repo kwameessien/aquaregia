@@ -50,12 +50,22 @@ export default function RitualsBookPage({
       }))
       .filter((image) => image.url.length > 0) ?? [];
 
+  const galleryImagesResolved =
+    galleryImages.length > 0 ? galleryImages : ritualsGalleryImageUrls.map((url) => ({ url }));
+
   return (
     <main
       className={`flex min-h-[100dvh] min-h-screen flex-col items-stretch justify-start bg-white ${ritualsBookMainBottomPad}`}
     >
-      <RitualsBookHeader logoUrl={content?.headerLogoUrl} />
+      {/* Order: mobile/tablet (<xl) = header → gallery → rule → product bar → contributors; xl+ = header → product bar → gallery → contributors */}
+      <RitualsBookHeader className="order-1" logoUrl={content?.headerLogoUrl} />
+      <RitualsBookGallery
+        className="order-2 xl:order-3"
+        images={galleryImagesResolved}
+      />
+      <div className="order-3 h-px w-full shrink-0 bg-black xl:hidden" aria-hidden />
       <RitualsBookProductBar
+        className="order-4 xl:order-2"
         stripeCheckout={stripeCheckout}
         sectionTitle={content?.sectionTitle}
         priceLine={
@@ -69,10 +79,7 @@ export default function RitualsBookPage({
         blurb={content?.blurb}
         cartLabel={content?.cartLabel}
       />
-      <div className="flex flex-col items-stretch justify-start px-[12px] pb-[20px] pt-0 sm:px-[20px] sm:pb-[28px] lg:px-[28px]">
-        <RitualsBookGallery
-          images={galleryImages.length > 0 ? galleryImages : ritualsGalleryImageUrls.map((url) => ({ url }))}
-        />
+      <div className="order-5 flex flex-col items-stretch justify-start px-[12px] pb-[20px] pt-0 sm:px-[20px] sm:pb-[28px] xl:order-4 lg:px-[28px]">
         <RitualsBookContributors
           heading={content?.contributorsHeading}
           contributors={content?.contributors ?? fallbackContributors}
@@ -81,6 +88,7 @@ export default function RitualsBookPage({
         />
       </div>
       <RitualsBookFooter
+        className="order-6 shrink-0"
         backLinkLabel={content?.footerBackLinkLabel}
         backLinkHref={content?.footerBackLinkHref}
       />

@@ -52,9 +52,10 @@ function ChevronRight({ className }: { className?: string }) {
 
 type RitualsBookGalleryProps = {
   images?: Array<{ url: string; alt?: string }>;
+  className?: string;
 };
 
-export default function RitualsBookGallery({ images }: RitualsBookGalleryProps) {
+export default function RitualsBookGallery({ images, className }: RitualsBookGalleryProps) {
   const resolvedImages =
     images && images.length > 0
       ? images
@@ -87,7 +88,9 @@ export default function RitualsBookGallery({ images }: RitualsBookGalleryProps) 
   }, [n]);
 
   return (
-    <div className="group relative left-1/2 w-screen max-w-[100vw] -translate-x-1/2">
+    <div
+      className={`group relative left-1/2 w-screen max-w-[100vw] -translate-x-1/2 ${className ?? ""}`}
+    >
       {/* Full-bleed wrapper so prev/next sit on the viewport edges; image stays centered. */}
       <div className="relative mx-auto w-full max-w-[min(100%,920px)] pt-[6px] sm:pt-[8px]">
         {/* Tall aspect + object-center created huge letterboxing above each slide; cap height and pin to top. */}
