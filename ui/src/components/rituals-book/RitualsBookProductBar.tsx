@@ -94,7 +94,7 @@ export default function RitualsBookProductBar({
             <p className={`${blurbClass} m-0`}>{blurb}</p>
           </div>
 
-          <div className="flex shrink-0 justify-start xl:justify-end xl:self-start xl:pt-0">
+          <div className="hidden shrink-0 justify-start xl:flex xl:justify-end xl:self-start xl:pt-0">
             <button type="button" className={cartClass}>
               {cartLabel}
             </button>

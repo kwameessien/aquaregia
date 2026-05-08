@@ -58,7 +58,11 @@ export default function RitualsBookPage({
       className={`flex min-h-[100dvh] min-h-screen flex-col items-stretch justify-start bg-white ${ritualsBookMainBottomPad}`}
     >
       {/* Order: mobile/tablet (<xl) = header → gallery → rule → product bar → contributors; xl+ = header → product bar → gallery → contributors */}
-      <RitualsBookHeader className="order-1" logoUrl={content?.headerLogoUrl} />
+      <RitualsBookHeader
+        className="order-1"
+        logoUrl={content?.headerLogoUrl}
+        cartLabel={content?.cartLabel}
+      />
       <RitualsBookGallery
         className="order-2 xl:order-3"
         images={galleryImagesResolved}
