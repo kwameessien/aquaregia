@@ -57,8 +57,8 @@ export default function RitualsBookProductBar({
     <section className={`w-full shrink-0 bg-white ${className ?? ""}`}>
       <div className="px-[12px] py-[16px] sm:px-[16px] sm:py-[18px] xl:px-[20px] xl:py-[10px]">
         <div className="flex flex-col gap-[18px] xl:flex-row xl:items-stretch xl:justify-between xl:gap-4">
-          <div className="flex w-full shrink-0 flex-col gap-[14px] self-stretch xl:max-w-[min(100%,240px)] xl:min-h-0 xl:justify-between xl:gap-0">
-            <div className="flex flex-col items-start gap-[4px]">
+          <div className="flex w-full shrink-0 flex-col items-center gap-[14px] self-stretch text-center xl:items-start xl:text-left xl:max-w-[min(100%,240px)] xl:min-h-0 xl:justify-between xl:gap-0">
+            <div className="flex flex-col items-center gap-[4px] xl:items-start">
               <h2 className={`${titleClass} m-0`}>{sectionTitle}</h2>
               {priceLine ? <p className={priceClass}>{priceLine}</p> : null}
             </div>
@@ -70,7 +70,7 @@ export default function RitualsBookProductBar({
             />
           </div>
 
-          <div className={`${specsClass} flex shrink-0 flex-col gap-[10px] sm:gap-[12px] xl:max-w-[220px]`}>
+          <div className={`${specsClass} flex shrink-0 flex-col items-center gap-[10px] text-center sm:gap-[12px] xl:items-start xl:text-left xl:max-w-[220px]`}>
             <p className="m-0">
               {specsLines.map((line, index) => (
                 <span key={`${line}-${index}`}>
@@ -89,7 +89,7 @@ export default function RitualsBookProductBar({
             </p>
           </div>
 
-          <div className="flex min-w-0 flex-1 flex-col gap-[10px] sm:gap-[12px] xl:max-w-[min(100%,380px)]">
+          <div className="flex min-w-0 flex-1 flex-col items-center gap-[10px] text-center sm:gap-[12px] xl:items-start xl:text-left xl:max-w-[min(100%,380px)]">
             <p className={`${introClass} m-0`}>{intro}</p>
             <p className={`${blurbClass} m-0`}>{blurb}</p>
           </div>
