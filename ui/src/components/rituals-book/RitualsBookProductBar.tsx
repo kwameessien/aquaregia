@@ -101,7 +101,7 @@ export default function RitualsBookProductBar({
           </div>
         </div>
       </div>
-      <div className="h-px w-full bg-black" aria-hidden />
+      <div className="hidden h-px w-full bg-black md:block" aria-hidden />
     </section>
   );
 }
