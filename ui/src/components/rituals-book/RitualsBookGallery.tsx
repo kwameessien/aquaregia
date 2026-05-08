@@ -92,15 +92,15 @@ export default function RitualsBookGallery({ images, className }: RitualsBookGal
       className={`group relative left-1/2 w-screen max-w-[100vw] -translate-x-1/2 ${className ?? ""}`}
     >
       {/* Full-bleed wrapper so prev/next sit on the viewport edges; image stays centered. */}
-      <div className="relative mx-auto w-full max-w-[min(100%,920px)] pt-[6px] sm:pt-[8px]">
-        {/* Tall aspect + object-center created huge letterboxing above each slide; cap height and pin to top. */}
+      <div className="relative mx-auto w-full max-w-[min(100%,920px)] py-[6px] sm:py-[8px]">
+        {/* Center slides on mobile between rules; keep top-pinned framing from md+ screens. */}
         <div className="relative h-[min(62dvh,720px)] w-full overflow-hidden bg-white sm:h-[min(68dvh,800px)]">
           <Image
             src={src}
             alt={activeImage.alt ?? ""}
             fill
             sizes="(max-width: 640px) 100vw, (max-width: 920px) 90vw, 920px"
-            className="object-contain object-top"
+            className="object-contain object-center md:object-top"
             priority={imagePriority}
             unoptimized={src.endsWith(".gif")}
           />

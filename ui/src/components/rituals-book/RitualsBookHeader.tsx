@@ -44,21 +44,21 @@ export default function RitualsBookHeader({
     <header
       className={`sticky top-0 z-30 w-full shrink-0 bg-white ${className ?? ""}`}
     >
-      <div className="flex flex-row items-center justify-between px-[12px] pb-[12px] pt-[10px] sm:px-[20px] sm:pb-[14px] xl:justify-center xl:px-[12px]">
+      <div className="flex flex-row items-center justify-between px-[12px] pb-[12px] pt-[10px] sm:px-[20px] sm:pb-[14px] md:justify-center md:px-[12px]">
         <Link href="/" className="block" aria-label="Aqua Regia home">
           <Image
             src={resolvedLogoUrl}
             alt=""
             width={56}
             height={37}
-            className="h-auto w-[40px] select-none sm:w-[44px] xl:w-[44px]"
+            className="h-auto w-[40px] select-none sm:w-[44px] md:w-[44px]"
             priority
             unoptimized={resolvedLogoUrl.endsWith(".svg")}
           />
         </Link>
         <button
           type="button"
-          className="flex h-[28px] w-[28px] items-center justify-center bg-transparent p-0 text-black xl:hidden"
+          className="flex h-[28px] w-[28px] items-center justify-center bg-transparent p-0 text-black md:hidden"
           aria-label={cartLabel}
         >
           <CartIcon className="h-[20px] w-[20px]" />

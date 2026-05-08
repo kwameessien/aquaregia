@@ -57,19 +57,19 @@ export default function RitualsBookPage({
     <main
       className={`flex min-h-[100dvh] min-h-screen flex-col items-stretch justify-start bg-white ${ritualsBookMainBottomPad}`}
     >
-      {/* Order: mobile/tablet (<xl) = header → gallery → rule → product bar → contributors; xl+ = header → product bar → gallery → contributors */}
+      {/* Order: mobile/tablet (<md) = header → gallery → rule → product bar → contributors; md+ = header → product bar → gallery → contributors */}
       <RitualsBookHeader
         className="order-1"
         logoUrl={content?.headerLogoUrl}
         cartLabel={content?.cartLabel}
       />
       <RitualsBookGallery
-        className="order-2 xl:order-3"
+        className="order-2 md:order-3"
         images={galleryImagesResolved}
       />
-      <div className="order-3 h-px w-full shrink-0 bg-black xl:hidden" aria-hidden />
+      <div className="order-3 h-px w-full shrink-0 bg-black md:hidden" aria-hidden />
       <RitualsBookProductBar
-        className="order-4 xl:order-2"
+        className="order-4 md:order-2"
         stripeCheckout={stripeCheckout}
         sectionTitle={content?.sectionTitle}
         priceLine={
@@ -83,7 +83,7 @@ export default function RitualsBookPage({
         blurb={content?.blurb}
         cartLabel={content?.cartLabel}
       />
-      <div className="order-5 flex flex-col items-stretch justify-start px-[12px] pb-[20px] pt-0 sm:px-[20px] sm:pb-[28px] xl:order-4 lg:px-[28px]">
+      <div className="order-5 flex flex-col items-stretch justify-start px-[12px] pb-[20px] pt-0 sm:px-[20px] sm:pb-[28px] md:order-4 lg:px-[28px]">
         <RitualsBookContributors
           heading={content?.contributorsHeading}
           contributors={content?.contributors ?? fallbackContributors}
@@ -92,7 +92,7 @@ export default function RitualsBookPage({
         />
       </div>
       <RitualsBookFooter
-        className="order-6 shrink-0"
+        className="order-6 hidden shrink-0 md:block"
         backLinkLabel={content?.footerBackLinkLabel}
         backLinkHref={content?.footerBackLinkHref}
       />

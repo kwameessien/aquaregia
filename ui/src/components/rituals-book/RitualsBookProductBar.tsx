@@ -16,10 +16,10 @@ const specsClass =
   "font-site-nav text-[8px] font-normal tracking-[0.01em] leading-[1.55] text-black sm:text-[9px] sm:leading-[1.5]";
 
 const cartClass =
-  "font-site-nav text-[11px] font-normal tracking-[0.07em] text-black no-underline decoration-black underline-offset-[3px] decoration-1 transition-[text-decoration-color] hover:underline sm:text-[12px] bg-transparent p-0 cursor-pointer border-0 text-left xl:text-right";
+  "font-site-nav text-[11px] font-normal tracking-[0.07em] text-black no-underline decoration-black underline-offset-[3px] decoration-1 transition-[text-decoration-color] hover:underline sm:text-[12px] bg-transparent p-0 cursor-pointer border-0 text-left md:text-right";
 
 const purchaseBadgeClass =
-  "mx-auto block w-full max-w-[min(100%,360px)] border border-black px-[12px] py-[6px] text-center font-site-nav text-[8px] font-normal uppercase tracking-[0.07em] text-neutral-600 no-underline transition-[color,background-color] duration-200 ease-out hover:bg-black hover:text-white sm:text-[9px] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-black xl:mx-0 xl:max-w-none";
+  "mx-auto block w-full max-w-[min(100%,360px)] border border-black px-[12px] py-[6px] text-center font-site-nav text-[8px] font-normal uppercase tracking-[0.07em] text-neutral-600 no-underline transition-[color,background-color] duration-200 ease-out hover:bg-black hover:text-white sm:text-[9px] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-black md:mx-0 md:max-w-none";
 
 type RitualsBookProductBarProps = {
   /** When true, “Add to cart” opens Stripe Checkout (server must have Stripe env vars). */
@@ -55,10 +55,10 @@ export default function RitualsBookProductBar({
 
   return (
     <section className={`w-full shrink-0 bg-white ${className ?? ""}`}>
-      <div className="px-[12px] py-[16px] sm:px-[16px] sm:py-[18px] xl:px-[20px] xl:py-[10px]">
-        <div className="flex flex-col gap-[18px] xl:flex-row xl:items-stretch xl:justify-between xl:gap-4">
-          <div className="flex w-full shrink-0 flex-col items-center gap-[14px] self-stretch text-center xl:items-start xl:text-left xl:max-w-[min(100%,240px)] xl:min-h-0 xl:justify-between xl:gap-0">
-            <div className="flex flex-col items-center gap-[4px] xl:items-start">
+      <div className="px-[12px] py-[16px] sm:px-[16px] sm:py-[18px] md:px-[20px] md:py-[10px]">
+        <div className="flex flex-col gap-[18px] md:flex-row md:items-stretch md:justify-between md:gap-4">
+          <div className="flex w-full shrink-0 flex-col items-center gap-[14px] self-stretch text-center md:items-start md:text-left md:max-w-[min(100%,240px)] md:min-h-0 md:justify-between md:gap-0">
+            <div className="flex flex-col items-center gap-[4px] md:items-start">
               <h2 className={`${titleClass} m-0`}>{sectionTitle}</h2>
               {priceLine ? <p className={priceClass}>{priceLine}</p> : null}
             </div>
@@ -70,7 +70,7 @@ export default function RitualsBookProductBar({
             />
           </div>
 
-          <div className={`${specsClass} flex shrink-0 flex-col items-center gap-[10px] text-center sm:gap-[12px] xl:items-start xl:text-left xl:max-w-[220px]`}>
+          <div className={`${specsClass} flex shrink-0 flex-col items-center gap-[10px] text-center sm:gap-[12px] md:items-start md:text-left md:max-w-[220px]`}>
             <p className="m-0">
               {specsLines.map((line, index) => (
                 <span key={`${line}-${index}`}>
@@ -89,12 +89,12 @@ export default function RitualsBookProductBar({
             </p>
           </div>
 
-          <div className="flex min-w-0 flex-1 flex-col items-center gap-[10px] text-center sm:gap-[12px] xl:items-start xl:text-left xl:max-w-[min(100%,380px)]">
+          <div className="flex min-w-0 flex-1 flex-col items-center gap-[10px] text-center sm:gap-[12px] md:items-start md:text-left md:max-w-[min(100%,380px)]">
             <p className={`${introClass} m-0`}>{intro}</p>
             <p className={`${blurbClass} m-0`}>{blurb}</p>
           </div>
 
-          <div className="hidden shrink-0 justify-start xl:flex xl:justify-end xl:self-start xl:pt-0">
+          <div className="hidden shrink-0 justify-start md:flex md:justify-end md:self-start md:pt-0">
             <button type="button" className={cartClass}>
               {cartLabel}
             </button>
